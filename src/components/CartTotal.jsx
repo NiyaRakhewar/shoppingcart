@@ -18,7 +18,7 @@ function CartTotal({ discount, updateDiscount, beforeDiscount, afterDiscount }) 
       </div>
       <div className='pricing'>
        <div className='pricing-div'> <p>Total: {formatCurrency(beforeDiscount)}</p>
-       <p>- Discount: {formatCurrency(discount)}</p></div>
+       <p>- Discount: {(discount)}%</p></div>
         {/* <p>After Discount: {formatCurrency(afterDiscount)}</p> */}
         <hr />
         <p>Net Total: {formatCurrency(afterDiscount - discount)}</p>
