@@ -32,12 +32,7 @@ function App() {
     }
   };
 
-  const calculateTotals = () => {
-    const subtotal = cart.reduce((total, product) => total + (product.price * product.quantity), 0);
-    const discountAmount = (discount / 100) * subtotal;
-    setBeforeDiscount(subtotal);
-    setAfterDiscount(subtotal - discountAmount);
-  };
+
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -49,8 +44,14 @@ function App() {
   }, []);
 
   useEffect(() => {
+    const calculateTotals = () => {
+      const subtotal = cart.reduce((total, product) => total + (product.price * product.quantity), 0);
+      const discountAmount = (discount / 100) * subtotal;
+      setBeforeDiscount(subtotal);
+      setAfterDiscount(subtotal - discountAmount);
+    };
     calculateTotals();
-  }, [cart, discount]);
+  }, [cart, discount]); 
 
   return (
     <div className="App">
