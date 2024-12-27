@@ -5,8 +5,8 @@ import './../styles/CartTotal.css';
 function CartTotal({ discount, updateDiscount, beforeDiscount, afterDiscount }) {
   return (
     <div className="cart-total">
-      <div>
-        <label htmlFor="discount">Discount (%)</label>
+      <div className='cart-total-sub'>
+        <label htmlFor="discount">Discount(%)</label>
         <input 
           type="number" 
           id="discount" 
@@ -16,10 +16,11 @@ function CartTotal({ discount, updateDiscount, beforeDiscount, afterDiscount }) 
           onChange={updateDiscount} 
         />
       </div>
-      <div>
-        <p>Total: {formatCurrency(beforeDiscount)}</p>
-        <p>Discount: {formatCurrency(discount)}</p>
-        <p>After Discount: {formatCurrency(afterDiscount)}</p>
+      <div className='pricing'>
+       <div className='pricing-div'> <p>Total: {formatCurrency(beforeDiscount)}</p>
+       <p>- Discount: {formatCurrency(discount)}</p></div>
+        {/* <p>After Discount: {formatCurrency(afterDiscount)}</p> */}
+        <hr />
         <p>Net Total: {formatCurrency(afterDiscount - discount)}</p>
       </div>
     </div>

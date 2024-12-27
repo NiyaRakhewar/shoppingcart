@@ -2,8 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0.5rem;
     padding: 10px;
     border: 1px solid #ccc;
+    width: 250px;
   }
   
   .product-info {

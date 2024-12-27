@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Shopping Cart</h1>
+      <h1 style={{marginBottom: "2rem"}}>Shopping Cart</h1>
       <Cart 
         cart={cart}
         updateQuantity={updateQuantity}

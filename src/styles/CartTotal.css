@@ -3,16 +3,46 @@
     padding: 20px;
     border-top: 1px solid #ccc;
     display: flex;
-    justify-content: space-between;
-  }
-  
-  input {
-    width: 60px;
-    padding: 5px;
+    flex-direction: column;
+    align-items: flex-end;
+    /* justify-content: space-between; */
     text-align: right;
   }
   
+  .cart-total-sub{
+    display: flex;
+  }
+  input {
+    width: 40px;
+    padding: 5px;
+    text-align: right;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  input:focus{
+    outline: none;
+  }  
+
   label {
     margin-right: 10px;
   }
   
+  .pricing{
+    width: 10vw;
+    width: 300px;
+  }
+
+
+  @media screen and (max-width: 768px) {
+.pricing-div{
+    width: 300px;
+    gap: 0.5rem;
+    align-items: flex-end;
+}
+hr{
+    width: 300px;
+    align-items: flex-end;
+}
+  }
