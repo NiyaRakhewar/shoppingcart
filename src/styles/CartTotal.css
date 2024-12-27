@@ -1,0 +1,18 @@
+.cart-total {
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  input {
+    width: 60px;
+    padding: 5px;
+    text-align: right;
+  }
+  
+  label {
+    margin-right: 10px;
+  }
+  
